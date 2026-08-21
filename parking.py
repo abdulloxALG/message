@@ -1,3 +1,5 @@
+# bu mening hayotim davomidagi ikkinchi
+
 class ParkingLot:
     def __init__(self, joy, narx):
         self.joy = joy
