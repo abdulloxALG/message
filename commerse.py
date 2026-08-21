@@ -1,3 +1,5 @@
+# bu mening commerse loyiham
+
 def promokod(xarid_summasi, minimal_xarid, chegirma_foizi, muddati_otgan):
 
     if muddati_otgan:
