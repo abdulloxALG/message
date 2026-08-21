@@ -1,30 +1,35 @@
-# bu mening commerse loyihammm
+def ecommerce(xarid_summasi, promokod, muddati_otgan, chegirma_foizi):
 
-def promokod(xarid_summasi, minimal_xarid, chegirma_foizi, muddati_otgan):
+    if promokod != "SALE20":
+        print("Promokod noto'g'ri.")
+        print("To'lanadigan summa:", xarid_summasi, "so'm")
 
-    if muddati_otgan:
-        print("Promokod muddati o'tgan")
-        return
+    elif muddati_otgan:
+        print("Promokod muddati o'tgan.")
+        print("To'lanadigan summa:", xarid_summasi, "so'm")
 
-    if xarid_summasi < minimal_xarid:
-        print("Minimal xarid summasiga yetmadi")
-        return
+    else:
+        chegirma = xarid_summasi * chegirma_foizi / 100
+        yakuniy_summa = xarid_summasi - chegirma
 
-    chegirma = xarid_summasi * chegirma_foizi / 100
-    yakuniy_summa = xarid_summasi - chegirma
+        print("Promokod qabul qilindi!")
+        print("Xarid summasi:", xarid_summasi, "so'm")
+        print("Chegirma:", chegirma, "so'm")
+        print("To'lanadigan summa:", yakuniy_summa, "so'm")
 
-    print("Chegirma:", chegirma)
-    print("Yakuniy summa:", yakuniy_summa)
 
+xarid_summasi = float(input("Xarid summasi: "))
 
-xarid_summasi = int(input("Xarid summasi: "))
-minimal_xarid = int(input("Minimal xarid summasi: "))
-chegirma_foizi = float(input("Chegirma foizi: "))
-muddati_otgan = input("Promokod muddati o'tganmi? (ha/yo'q): ")
+promokod = input("Promokod kiriting: ")
 
-if muddati_otgan == "ha":
+muddati = input("Promokod muddati o'tganmi? (ha/yo'q): ").lower()
+
+if muddati == "ha":
     muddati_otgan = True
 else:
     muddati_otgan = False
 
-promokod(xarid_summasi, minimal_xarid, chegirma_foizi, muddati_otgan)
+chegirma_foizi = float(input("Chegirma foizi: "))
+
+
+ecommerce(xarid_summasi, promokod, muddati_otgan, chegirma_foizi)
