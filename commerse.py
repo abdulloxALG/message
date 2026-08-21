@@ -1,4 +1,4 @@
-# bu mening commerse loyihamm
+# bu mening commerse loyihammm
 
 def promokod(xarid_summasi, minimal_xarid, chegirma_foizi, muddati_otgan):
 
